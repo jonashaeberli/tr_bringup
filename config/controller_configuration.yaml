@@ -24,6 +24,7 @@ position_trajectory_controller:
     command_interfaces:
       - position
       - velocity
+      - acceleration
 
     state_interfaces:
       - position
