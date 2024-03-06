@@ -1,0 +1,24 @@
+# Controller manager configuration
+controller_manager:
+  ros__parameters:
+    update_rate: 10  # Hz
+
+    ### Controllers to be initialized at startup ###
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    forward_position_controller:
+      type: forward_command_controller/ForwardCommandController
+
+
+### Properties of the controllers that we will use and definition of joints to use ###
+forward_position_controller:
+  ros__parameters:
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+    interface_name: position
